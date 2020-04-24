@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "7f5174e0-1553-42bf-a7cb-22490993def7",
+		"name": "Kong API Gateway copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "What is the MITRE ATT&CK mapping for this CVE?",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-RC",
+						"value": "1",
+						"description": "Record Count - Used for billing purposes"
+					},
+					{
+						"key": "X-user",
+						"value": "tomas.semenzato@nan-labs.com",
+						"description": "User - Extracted from logged in user (WEB API)"
+					},
+					{
+						"key": "X-IP",
+						"value": "181.224.11.5",
+						"description": "IP - Extracted from the requesting user (WEB API)"
+					},
+					{
+						"key": "x-api-key",
+						"value": "m4POfEwT7LokHtmtXxyArTZQhKYKJkgE",
+						"description": "API Key - Provided to KAM customers"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{KONG_URL}}:{{KONG_PORT}}/{{CVE_PATH}}/CVE-2020-0614",
+					"host": [
+						"{{KONG_URL}}"
+					],
+					"port": "{{KONG_PORT}}",
+					"path": [
+						"{{CVE_PATH}}",
+						"CVE-2020-0614"
+					]
+				},
+				"description": "In order to build complex cyber security scenarios one must map more than +100k vulnerabilities (CVEs) to the corresponding MITRE ATT&CK. The benefit of the corresponding controls allows the organization to better prioritize what actions should be taken. We use natural language processing to achieve this task."
+			},
+			"response": [
+				{
+					"id": "cff82b68-5df2-4186-8dae-f16e5cf5db78",
+					"name": "What is the MITRE ATT&CK mapping for this CVE?",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-RC",
+								"value": "1",
+								"description": "Record Count - Used for billing purposes"
+							},
+							{
+								"key": "X-user",
+								"value": "tomas.semenzato@nan-labs.com",
+								"description": "User - Extracted from logged in user (WEB API)"
+							},
+							{
+								"key": "X-IP",
+								"value": "181.224.11.5",
+								"description": "IP - Extracted from the requesting user (WEB API)"
+							},
+							{
+								"key": "x-api-key",
+								"value": "m4POfEwT7LokHtmtXxyArTZQhKYKJkgE",
+								"description": "API Key - Provided to KAM customers"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{KONG_URL}}:{{KONG_PORT}}/{{CVE_PATH}}/CVE-2020-0614",
+							"host": [
+								"{{KONG_URL}}"
+							],
+							"port": "{{KONG_PORT}}",
+							"path": [
+								"{{CVE_PATH}}",
+								"CVE-2020-0614"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "661",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Apr 2020 12:22:10 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0 (Ubuntu)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Via",
+							"value": "kong/2.0.1",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "118",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "213",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"results\": [\n    {\n      \"CVE\": \"CVE-2020-0614\", \n      \"CVSS2_Score\": 4.6, \n      \"CVSS2_Vector\": \"AV:L/AC:L/Au:N/C:P/I:P/A:P\", \n      \"CVSS3_Score\": 7.8, \n      \"CVSS3_Vector\": \"CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H\", \n      \"CWEs\": \"CWE-269\", \n      \"Coverage\": \"High\", \n      \"Exploit_Code\": \"Unproven\", \n      \"Industry_Spread\": \"Retail,Banking,Government - Federal,Education,Consulting\", \n      \"Mitre_Techniques\": [\n        {\n          \"Technique_ID\": \"T1068\", \n          \"Technique_Name\": \"Exploitation for Privilege Escalation\", \n          \"Technique_Tactic_IDS\": \"TA0004\"\n        }\n      ], \n      \"Threat_Activity\": \"Very Low\"\n    }\n  ]\n}\n"
+				}
+			]
+		},
+		{
+			"name": "MockDataAPI Users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-RC",
+						"value": "1",
+						"description": "Record Count - Used for billing purposes"
+					},
+					{
+						"key": "X-user",
+						"value": "tomas.semenzato@nan-labs.com",
+						"description": "User - Extracted from logged in user (WEB API)"
+					},
+					{
+						"key": "X-IP",
+						"value": "181.224.11.5",
+						"description": "IP - Extracted from the requesting user (WEB API)"
+					},
+					{
+						"key": "x-api-key",
+						"value": "TK4IBuu0y6lOF2N8DpuZboFxZ9WLqFJt",
+						"description": "API Key - Must be provided by KAM Staff"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{KONG_URL}}:{{KONG_PORT}}/{{POC_PATH}}/users",
+					"host": [
+						"{{KONG_URL}}"
+					],
+					"port": "{{KONG_PORT}}",
+					"path": [
+						"{{POC_PATH}}",
+						"users"
+					]
+				},
+				"description": "In order to build complex cyber security scenarios one must map more than +100k vulnerabilities (CVEs) to the corresponding MITRE ATT&CK. The benefit of the corresponding controls allows the organization to better prioritize what actions should be taken. We use natural language processing to achieve this task."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f80280d4-988a-417b-9760-837fbd78816e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "9b2ed463-d031-4fd7-817e-928d3feced7f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "8ae1dd55-1684-42ee-af5d-3f08e0adf5ec",
+			"key": "KONG_URL",
+			"value": "http://ec2-52-13-73-88.us-west-2.compute.amazonaws.com",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "6933036f-1368-414e-b713-95acf61fcbdc",
+			"key": "CVE_PATH",
+			"value": "cveintel/CVE",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "231b497f-ba55-4a35-bf90-45238830a58c",
+			"key": "KONG_PORT",
+			"value": "20000",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "7a85c931-81df-418f-8409-f28a329d7d11",
+			"key": "POC_PATH",
+			"value": "users-poc",
+			"type": "string",
+			"description": ""
+		}
+	]
+}
